@@ -2,6 +2,9 @@ $(window).on('load', function(){
     const id = $('body').attr('data-id');
     console.log(id);
 
+    $('#employee').removeClass('unmarked');
+    $('#dashboard').addClass('unmarked');
+
     $.ajax({
         url: '../src/library/editEmployee.php',
         type: 'post',
@@ -23,7 +26,7 @@ $(window).on('load', function(){
         }
     })
 
-    $('form').submit(function(e){
+    $('.employee-form').submit(function(e){
         e.preventDefault();
         // We get the form data
         let formData = {};
@@ -53,9 +56,12 @@ $(window).on('load', function(){
             type: 'POST',
             success: function (data) {
                 $('.info-edit').show()
-                setTimeout(function() {window.location = './dashboard.php'}, 2000)
+                setTimeout(function() {window.location = './dashboard.php'}, 2000);
                 console.log(data);
             }
         })
     });
+    $(document).on('click', '#employee-form_return', (function() {
+        window.location = './dashboard.php';
+    }))
 })
