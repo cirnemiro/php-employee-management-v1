@@ -1,11 +1,11 @@
 <?php
 
 if(isset($_POST['name'])) {
-    
+
     $id = $_POST['id'];
     $data = file_get_contents('../../resources/employees.json');
     $dataArray = json_decode($data, true);
-    
+
     $employeeArray = $_POST;
     $employeeJson = json_encode($employeeArray);
 
@@ -26,5 +26,4 @@ if(isset($_POST['name'])) {
     print_r($i);
     print_r($employeeArray);
     print_r($finalJson);
-
 }

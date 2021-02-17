@@ -17,6 +17,15 @@
 <body class="h-100" id =""data-id="<?php echo isset($_GET['id']) ? $_GET['id'] : '' ?>">
 
     <?php
+    session_start();
+
+    if (isset($_SESSION["userId"])){
+        require("./library/sessionHelper.php");
+    }else{
+        $url = '../index.php';
+        header("Refresh: 0; URL=$url?error=You aren't logged in");
+        exit();
+    }
 
     include "../assets/html/header.html";
     include "../assets/html/employee.html";
