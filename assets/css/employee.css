@@ -17,3 +17,9 @@ html {
         justify-content: center;
     }
 }
+
+.info-edit{
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+}

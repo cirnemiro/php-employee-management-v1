@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="../assets/css/main.css">
     <link rel="stylesheet" href="../assets/css/employee.css">
 </head>
-<body class="h-100" data-id="<?php echo isset($_GET['id']) ? $_GET['id'] : '' ?>">
+<body class="h-100" id =""data-id="<?php echo isset($_GET['id']) ? $_GET['id'] : '' ?>">
 
     <?php
 

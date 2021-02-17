@@ -97,7 +97,7 @@ $(window).on('load', function(){
             });
 
             
-            $('form').submit(function(e){                   // We get the form data
+            $('.new-employee').submit(function(e){                   // We get the form data
                 let formData = $('form').serializeArray();  
                 let data = {};                              // Convert the data to an object
                 $( formData ).each(function(index, obj){
