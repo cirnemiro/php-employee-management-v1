@@ -7,11 +7,8 @@ abstract class Controller
     {
         $this->name = $name;
     }
-
-    public function loadModel()
-    {
-        $path = 'models/' . $this->name . '.php';
-
+    public function load($type){
+        $path = $type . $this->name . '.php';
         if (file_exists($path)) {
             require_once $path;
         }

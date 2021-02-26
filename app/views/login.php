@@ -1,15 +1,17 @@
 <?php
+require_once CLASS_VIEW;
 
-// $view = new View('header', 'main', 'footer');
+$login = new View("
+<div>
+    <form action='login/checkUser' method='POST'>
+        <input type='text' name='userName'></input>  
+        <input type='text' name='userPassword'></input>   
+        <input type='submit'>Log In</input>
+    </form>
+</div>
+");
 
-class LoginView extends View
-{
-    public function loginView()
-    {
-        echo '<div>HOLA</div>';
-    }
-}
 
-$login = new LoginView('un altre cosa');
 
-$login->render($this->loginView());
+
+
