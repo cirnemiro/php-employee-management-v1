@@ -8,9 +8,8 @@ class View
         $this->view = $view;
         $this->render($view);
     }
-    
     public function render($html)
-    {   
+    {
         echo "<!DOCTYPE html>
             <html lang='en'>
             <head>
